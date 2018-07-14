@@ -1,0 +1,36 @@
+{
+  "name": "gradient-base",
+  "version": "0.1.0",
+  "description": "Base module of the gradient.js library",
+  "browser": "dist/gradient-base.umd.js",
+  "scripts": {
+    "dev": "rollup -c",
+    "test": "jest",
+    "docs": "./node_modules/.bin/jsdoc ./src/* -d ./docs --readme ./README.md",
+    "dev-docs": "./node_modules/.bin/jsdoc -p ./src/* -d ./docs --readme ./README.md"
+  },
+  "keywords": [
+    "chroma-js",
+    "colors",
+    "gradients"
+  ],
+  "author": "Jakub Antolak",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.2.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.6",
+    "rollup-plugin-cleanup": "^3.0.0-beta.1",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-copy": "^0.2.3",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-serve": "^0.4.2",
+    "rollup-plugin-terser": "^1.0.1"
+  },
+  "dependencies": {
+    "chroma-js": "^1.3.7"
+  }
+}
