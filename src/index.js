@@ -40,6 +40,7 @@ export default class Base {
      * and returns array of arrays of numbers if the input is valid
      * @param {Colors} colors 
      * @returns {(number[][]|void)}
+     * @private
      */
     _checkColorsType(colors) {
         const containsNum = colors
@@ -67,6 +68,7 @@ export default class Base {
      * Converts array of rgb(a) arrays into rgb(a) strings
      * @param {Colors} colors 
      * @returns {string[]}
+     * @private
      */
     _stringifyColors(colors) {
         return colors.map(color => {
@@ -79,6 +81,7 @@ export default class Base {
      * Removes clipped values from the scaling output
      * @param {Object[]} base
      * @returns {number[][]} 
+     * @private
      */
     _normalize(base) {
         return base.map(color => color._rgb)
@@ -91,6 +94,7 @@ export default class Base {
      * Creates base colors array using given scale
      * @param {void} scale 
      * @returns {Object[]}
+     * @private
      */
     _createBase(scale) {
         const base = []
@@ -103,6 +107,7 @@ export default class Base {
     /**
      * Creates scale
      * @returns {Function}
+     * @private
      */
     _createScale() {
         return this[`_${this.options.interpolation}Scale`]()
@@ -111,6 +116,7 @@ export default class Base {
     /**
      * Creates linear scale
      * @returns {Function}
+     * @private
      */
     _linearScale() {
         if (this.options.mode !== 'none') {
@@ -139,6 +145,7 @@ export default class Base {
     /**
      * Creates bezier scale
      * @returns {Function}
+     * @private
      */
     _bezierScale() {
         if (this.options.lightnessCorrection) {
