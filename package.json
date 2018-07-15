@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "rollup -c",
     "test": "jest",
-    "docs": "./node_modules/.bin/jsdoc ./src/* -d ./docs --readme ./README.md",
-    "dev-docs": "./node_modules/.bin/jsdoc -p ./src/* -d ./docs --readme ./README.md"
+    "docs": "./node_modules/.bin/jsdoc ./index.js -d ./docs --readme ./README.md",
+    "dev-docs": "./node_modules/.bin/jsdoc -p ./index.js -d ./docs --readme ./README.md"
   },
   "keywords": [
     "chroma-js",

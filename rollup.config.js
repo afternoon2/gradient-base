@@ -13,7 +13,7 @@ const babelConf = {
 }
 
 export default {
-    input: 'src/index.js',
+    input: 'index.js',
     external: ['chroma-js'],
     globals: {
         'chroma-js': 'chroma'
