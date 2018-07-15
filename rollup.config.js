@@ -14,16 +14,16 @@ const babelConf = {
 
 export default {
     input: 'src/index.js',
+    external: ['chroma-js'],
+    globals: {
+        'chroma-js': 'chroma'
+    },
     output: [
         {
             extend: true,
             format: 'umd',
-            file: `./dist/${name}.umd.js`,
+            file: './dist/gradient-base.umd.js',
             name: 'gradient',
-            external: ['chroma-js'],
-            globals: {
-                'chroma-js': 'chroma'
-            },
             sourcemap: true
         }
     ],
