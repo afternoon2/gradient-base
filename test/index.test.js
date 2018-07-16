@@ -1,4 +1,4 @@
-import Base from '../src/index'
+import Base from '../index'
 
 test(
     'If base class does not accept mixed typed color arrays',
@@ -13,7 +13,7 @@ test(
             lightnessCorrection: true
         }
         const safeExecution = () => {
-            const base = new Base(fakeColors, config)
+            new Base(fakeColors, config)
         }
         expect(safeExecution).toThrowError('Mixed color types ')
     }
