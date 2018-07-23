@@ -29,7 +29,7 @@ export default class Base {
          * @property {Options} _options
          * @private
          */
-        this._baseOptions = options
+        this._options = options
     }
 
     /**
@@ -106,8 +106,8 @@ export default class Base {
      */
     _createBase(scale) {
         const base = []
-        for (let i = 0; i < this._baseOptions.samples; i++) {
-            base.push(scale(i / this._baseOptions.samples))
+        for (let i = 0; i < this._options.samples; i++) {
+            base.push(scale(i / this._options.samples))
         }
         return base
     }
@@ -118,7 +118,7 @@ export default class Base {
      * @private
      */
     _createScale() {
-        return this[`_${this._baseOptions.interpolation}Scale`]()
+        return this[`_${this._options.interpolation}Scale`]()
     }
 
     /**
@@ -127,19 +127,19 @@ export default class Base {
      * @private
      */
     _linearScale() {
-        if (this._baseOptions.mode !== 'none') {
-            if (this._baseOptions.lightnessCorrection) {
+        if (this._options.mode !== 'none') {
+            if (this._options.lightnessCorrection) {
                 return chroma
                     .scale(this._colors)
-                    .mode(this._baseOptions.mode)
+                    .mode(this._options.mode)
                     .correctLightness()
             } else {
                 return chroma
                     .scale(this._colors)
-                    .mode(this._baseOptions.mode)
+                    .mode(this._options.mode)
             }
         } else {
-            if (this._baseOptions.lightnessCorrection) {
+            if (this._options.lightnessCorrection) {
                 return chroma
                     .scale(this._colors)
                     .correctLightness()
@@ -156,7 +156,7 @@ export default class Base {
      * @private
      */
     _bezierScale() {
-        if (this._baseOptions.lightnessCorrection) {
+        if (this._options.lightnessCorrection) {
             return chroma
                 .bezier(this._colors)
                 .scale()
