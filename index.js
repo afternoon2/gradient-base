@@ -20,8 +20,16 @@ import chroma from 'chroma-js'
  */
 export default class Base {
     constructor(colors, options) {
-        this.colors = this._checkColorsType(colors)
-        this.options = options
+        /**
+         * @property {Colors} colors - checked colors parameter
+         */
+        this._colors = this._checkColorsType(colors)
+
+        /**
+         * @property {Options} _options
+         * @private
+         */
+        this._baseOptions = options
     }
 
     /**
@@ -98,8 +106,8 @@ export default class Base {
      */
     _createBase(scale) {
         const base = []
-        for (let i = 0; i < this.options.samples; i++) {
-            base.push(scale(i / this.options.samples))
+        for (let i = 0; i < this._baseOptions.samples; i++) {
+            base.push(scale(i / this._baseOptions.samples))
         }
         return base
     }
@@ -110,7 +118,7 @@ export default class Base {
      * @private
      */
     _createScale() {
-        return this[`_${this.options.interpolation}Scale`]()
+        return this[`_${this._baseOptions.interpolation}Scale`]()
     }
 
     /**
@@ -119,25 +127,25 @@ export default class Base {
      * @private
      */
     _linearScale() {
-        if (this.options.mode !== 'none') {
-            if (this.options.lightnessCorrection) {
+        if (this._baseOptions.mode !== 'none') {
+            if (this._baseOptions.lightnessCorrection) {
                 return chroma
-                    .scale(this.colors)
-                    .mode(this.options.mode)
+                    .scale(this._colors)
+                    .mode(this._baseOptions.mode)
                     .correctLightness()
             } else {
                 return chroma
-                    .scale(this.colors)
-                    .mode(this.options.mode)
+                    .scale(this._colors)
+                    .mode(this._baseOptions.mode)
             }
         } else {
-            if (this.options.lightnessCorrection) {
+            if (this._baseOptions.lightnessCorrection) {
                 return chroma
-                    .scale(this.colors)
+                    .scale(this._colors)
                     .correctLightness()
             } else {
                 return chroma
-                    .scale(this.colors)
+                    .scale(this._colors)
             }
         }
     }
@@ -148,14 +156,14 @@ export default class Base {
      * @private
      */
     _bezierScale() {
-        if (this.options.lightnessCorrection) {
+        if (this._baseOptions.lightnessCorrection) {
             return chroma
-                .bezier(this.colors)
+                .bezier(this._colors)
                 .scale()
                 .correctLightness()
         } else {
             return chroma
-                .bezier(this.colors)
+                .bezier(this._colors)
         }
     }
 }
