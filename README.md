@@ -19,9 +19,10 @@ gradient.js is a javascript module that takes your source colors array and confi
 ## Usage
 `Base.get` function takes 2 parameters: the colors array and the configuration object.
 ```javascript
-const base = new Base()
+const base = new Base(colors, options)
 
-const g = base.get(colors, options)
+const g = base.get()
+// [[0,222,31,0.4],[1.3265624999999999,199.890625,31.331640625,0.466328125], (...)]
 ```
 
 ## Parameters
