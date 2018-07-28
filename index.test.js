@@ -1,4 +1,4 @@
-import Base from '../index'
+import Base from './index'
 
 test(
     'If base class does not accept mixed typed color arrays',
