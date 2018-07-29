@@ -1,4 +1,4 @@
-# gradient.base.js
+# gradient-base.js
 
 This module creates base gradient output for gradient.js modules.
 
@@ -8,6 +8,7 @@ This module creates base gradient output for gradient.js modules.
 * [Parameters](#parameters)
     * [Colors](#colors)
     * [Options](#options)
+    * [Opacity](#opacity)
 
 ---
 ## gradient.js
@@ -64,3 +65,6 @@ The `mode` entry is ommited when the `interpolation` is set to `bezier`.
 Usefullness of setting the lightness correction to `true` (combined with the `bezier` interpolation) is [very well described by Gregor Aisch here](https://www.vis4.net/blog/2013/09/mastering-multi-hued-color-scales/).
 
 The `samples` stand for the number of the output colors. The more you set, the nicer gradient you get (but with worse performance of course).
+
+## Opacity
+Alpha values will be not preserved in the output if the `interpolation` will be set to the `bezier` value.
