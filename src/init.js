@@ -9,7 +9,7 @@ import Base from './Base'
  * @private
  */
 export default (colors, options) => {
-    const _base = new Base(colors, options)
+    const _base = new Base(colors, options.base)
     return {
         colors: _base.get(),
         options: options
