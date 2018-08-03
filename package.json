@@ -10,7 +10,8 @@
     "docs": "./node_modules/.bin/jsdoc ./src/base.js -d ./docs --readme ./README.md",
     "dev-docs": "./node_modules/.bin/jsdoc -p ./src/** -d ./docs --readme ./README.md",
     "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once",
+    "commit": "git-cz"
   },
   "keywords": [
     "chroma-js",
@@ -22,6 +23,8 @@
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
     "jest": "^23.2.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.6",
@@ -41,5 +44,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/afternoon2/gradient-base.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
