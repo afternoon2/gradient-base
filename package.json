@@ -9,7 +9,7 @@
     "test": "jest && codecov",
     "docs": "./node_modules/.bin/jsdoc ./src/base.js -d ./docs --readme ./README.md",
     "dev-docs": "./node_modules/.bin/jsdoc -p ./src/** -d ./docs --readme ./README.md",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release --publish",
     "travis-deploy-once": "travis-deploy-once",
     "commit": "git-cz"
   },
