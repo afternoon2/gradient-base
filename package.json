@@ -25,6 +25,7 @@
     "babel-preset-env": "^1.7.0",
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
+    "ghooks": "^2.0.4",
     "jest": "^23.2.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.6",
@@ -47,7 +48,10 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-conventional-changelog",
+      "ghooks": {
+        "pre-commit": "npm run test"
+      }
     }
   }
 }
