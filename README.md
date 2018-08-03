@@ -28,25 +28,7 @@ const g = base.get()
 
 ## Parameters
 ### Colors
-Colors input should be an array of numbers in rgb or rgba format.
-
-```javascript
-[
-    [0, 222, 31, 0.4],
-    [12, 22, 34]
-]
-```
-
-or array of css rgb(a) strings.
-
-```javascript
-[
-    'rgba(0, 222, 31, 0.4)',
-    'rgb(12, 22, 34)'
-]
-```
-
-Please note, that input colors are the source for further creation of probably bigger amount of output colors, so try to insert max. 5 colors as an input for better visual effect.
+Colors input should be an array of numbers in rgb or rgba format or array of css rgb(a) strings.
 
 ### Options
 
