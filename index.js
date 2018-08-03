@@ -1,5 +1,5 @@
 import Base from './src/base'
-import DOMLayer from './src/dom-layer'
+import _init from './src/init'
 
 export default Base
-export { DOMLayer }
+export { _init }
