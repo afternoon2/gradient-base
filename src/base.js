@@ -15,27 +15,19 @@ import chroma from 'chroma-js'
 /**
  * @class Base
  * @classdesc provides base array of gradient data
- * @param {Colors} colors - input colors as an array of rgb(a) number arrays or css rgb(a) strings
- * @param {Options} options - base configuration object
  */
 export default class Base {
-    constructor(colors, options) {
-        /**
-         * @property {Colors} colors - checked colors parameter
-         */
-        this._colors = this._checkColorsType(colors)
-
-        /**
-         * @property {Options} _options
-         * @private
-         */
-        this._options = options
-    }
+    constructor() {}
 
     /**
+     * Returns base colors array
+     * @param {Colors} colors - input colors as an array of rgb(a) number arrays or css rgb(a) strings
+     * @param {Options} options - base configuration object
      * @returns {number[][]} base colors array
      */
-    get() {
+    get(colors, options) {
+        this._colors = this._checkColorsType(colors)
+        this._options = options
         const scale = this._createScale()
         return this._normalize(
             this._createBase(scale)

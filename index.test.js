@@ -13,7 +13,8 @@ test(
             lightnessCorrection: true
         }
         const safeExecution = () => {
-            new Base(fakeColors, config)
+            const base = new Base()
+            base.get(fakeColors, config)
         }
         expect(safeExecution).toThrowError('Mixed color types ')
     }
@@ -34,8 +35,8 @@ test(
             [9, 9, 9, 0.5],
             [255, 255, 240, 1]
         ]
-        const base = new Base(colors, opts)
-        const baseResult = base.get()
+        const base = new Base()
+        const baseResult = base.get(colors, opts)
         expect(baseResult.length).toBe(opts.samples)
     }
 )
@@ -46,8 +47,8 @@ test(
         const cols = [
             [66, 134, 244, 0.6], [244, 241, 65, 0.10]
         ]
-        const base = new Base(cols, opts)
-        const baseResult = base.get()
+        const base = new Base()
+        const baseResult = base.get(cols, opts)
         expect(Array.isArray(baseResult[0])).toBe(true)
         expect(baseResult[0].length).toBe(4)
         expect(typeof baseResult[0][0]).toBe('number')
@@ -61,8 +62,8 @@ test(
             [9, 9, 9, 0.5],
             [255, 255, 240, 1]
         ]
-        const base = new Base(colors, opts)
-        const baseResult = base.get()
+        const base = new Base()
+        const baseResult = base.get(colors, opts)
         const opacityNotPreserved = baseResult
             .findIndex(res => res.length < 4) > -1 ?
             true : false
