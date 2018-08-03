@@ -8,7 +8,7 @@ import Base from './Base'
  * @returns {object}
  * @private
  */
-export default _init = (colors, options) => {
+export default (colors, options) => {
     const _base = new Base(colors, options)
     return {
         colors: _base.get(),
