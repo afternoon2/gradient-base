@@ -11,8 +11,6 @@ import Base from './Base'
  */
 export default (parent, colors, options) => {
     parent.base = new Base()
-    return {
-        colors: parent.base.get(colors, options.base),
-        options: options
-    }
+    parent.colors = parent.base.get(colors, options.base)
+    parent.options = options
 }
