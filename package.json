@@ -6,7 +6,7 @@
   "module": "dist/gradient-base.mjs",
   "scripts": {
     "dev": "rollup -c",
-    "test": "jest",
+    "test": "jest && codecov",
     "docs": "./node_modules/.bin/jsdoc ./src/base.js -d ./docs --readme ./README.md",
     "dev-docs": "./node_modules/.bin/jsdoc -p ./src/** -d ./docs --readme ./README.md",
     "semantic-release": "semantic-release",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
+    "codecov": "^3.0.4",
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
     "ghooks": "^2.0.4",
@@ -53,5 +54,17 @@
     "ghooks": {
       "pre-commit": "npm run test"
     }
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
