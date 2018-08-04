@@ -1,4 +1,4 @@
-import Base from './src/base'
+import Base from './index.js'
 
 test(
     'If base class does not accept mixed typed color arrays',

@@ -2,13 +2,13 @@
   "name": "gradient-base",
   "version": "1.0.2",
   "description": "Base module of the gradient.js library",
-  "browser": "./dist/gradient-base.umd.js",
-  "module": "./dist/gradient-base.mjs",
+  "browser": "gradient-base.umd.js",
+  "module": "gradient-base.mjs",
   "scripts": {
     "dev": "rollup -c",
     "test": "jest && codecov",
-    "docs": "./node_modules/.bin/jsdoc ./src/base.js -d ./docs --readme ./README.md",
-    "dev-docs": "./node_modules/.bin/jsdoc -p ./src/** -d ./docs --readme ./README.md",
+    "docs": "./node_modules/.bin/jsdoc ./index.js -d ./docs --readme ./README.md",
+    "dev-docs": "./node_modules/.bin/jsdoc -p ./index.js -d ./docs --readme ./README.md",
     "semantic-release": "semantic-release --publish",
     "travis-deploy-once": "travis-deploy-once",
     "commit": "git-cz"

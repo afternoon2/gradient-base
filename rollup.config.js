@@ -22,14 +22,14 @@ export default {
         {
             extend: true,
             format: 'umd',
-            file: './dist/gradient-base.umd.js',
+            file: './gradient-base.umd.js',
             name: 'Base',
             sourcemap: true
         },
         {
             extend: true,
             format: 'es',
-            file: './dist/gradient-base.mjs',
+            file: './gradient-base.mjs',
             name: 'Base',
             sourcemap: true
         }

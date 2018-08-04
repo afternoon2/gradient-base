@@ -1,4 +1,7 @@
 node_modules/
 .vscode
-dist
 coverage
+gradient-base.umd.js
+gradient-base.umd.js.map
+gradient-base.mjs
+gradient-base.mjs.map
