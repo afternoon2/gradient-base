@@ -1,8 +1,11 @@
 src
 docs
+coverage
 index.js
 index.test.js
 rollup.config.js
 .travis.yml
 .eslintignore
 .eslintrc.json
+.babelrc
+.travis.yml

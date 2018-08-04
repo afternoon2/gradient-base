@@ -4,7 +4,6 @@ import commonjs from 'rollup-plugin-commonjs'
 import eslint from 'rollup-plugin-eslint'
 import resolve from 'rollup-plugin-node-resolve'
 import eslintConf from './.eslintrc.json'
-import name from './package.json'
 import { terser } from 'rollup-plugin-terser'
 
 const babelConf = {
@@ -13,7 +12,7 @@ const babelConf = {
 }
 
 export default {
-    input: 'index.js',
+    input: './index.js',
     external: ['chroma-js'],
     globals: {
         'chroma-js': 'chroma'
@@ -22,16 +21,8 @@ export default {
         {
             extend: true,
             format: 'umd',
-            file: './gradient-base.umd.js',
-            name: 'Base',
-            sourcemap: true
-        },
-        {
-            extend: true,
-            format: 'es',
-            file: './gradient-base.mjs',
-            name: 'Base',
-            sourcemap: true
+            file: './gradient-base.js',
+            name: 'Base'
         }
     ],
     watch: {
