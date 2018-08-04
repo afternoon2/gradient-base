@@ -2,8 +2,8 @@
   "name": "gradient-base",
   "version": "1.0.1",
   "description": "Base module of the gradient.js library",
-  "browser": "dist/gradient-base.umd.js",
-  "module": "dist/gradient-base.mjs",
+  "browser": "./dist/gradient-base.umd.js",
+  "module": "./dist/gradient-base.mjs",
   "scripts": {
     "dev": "rollup -c",
     "test": "jest && codecov",
