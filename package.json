@@ -1,6 +1,6 @@
 {
   "name": "gradient-base",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Base module of the gradient.js library",
   "browser": "dist/gradient-base.umd.js",
   "module": "dist/gradient-base.mjs",
