@@ -14,15 +14,15 @@ const babelConf = {
 export default {
     input: './index.js',
     external: ['chroma-js'],
-    globals: {
-        'chroma-js': 'chroma'
-    },
     output: [
         {
             extend: true,
             format: 'umd',
             file: './gradient-base.js',
-            name: 'Base'
+            name: 'Base',
+            globals: {
+                'chroma-js': 'chroma'
+            }
         }
     ],
     watch: {
