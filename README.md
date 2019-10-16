@@ -1,3 +1,6 @@
+# Deprecated
+## Better check [gradient-js](https://github.com/afternoon2/gradient-js).
+
 # gradient-base.js 
 [![License](https://img.shields.io/npm/l/gradient-base.svg?style=flat)](https://github.com/afternoon2/gradient-base/blob/master/LICENSE)&nbsp;&nbsp;
 [![Travis build](https://img.shields.io/travis/afternoon2/gradient-base.svg?style=flat)](https://travis-ci.org/afternoon2/gradient-base)&nbsp;&nbsp;[![Codecov](https://img.shields.io/codecov/c/github/afternoon2/gradient-base.svg?style=flat)](https://codecov.io/gh/afternoon2/gradient-base)

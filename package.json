@@ -45,25 +45,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/afternoon2/gradient-base.git"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "ghooks": {
-      "pre-commit": "npm run test"
-    }
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 50,
-        "functions": 50,
-        "lines": 50,
-        "statements": 50
-      }
-    },
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
   }
 }
